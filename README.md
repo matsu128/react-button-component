@@ -161,13 +161,14 @@
 ```json
 "predeploy": "npm run build",
 "deploy": "gh-pages -d build"
+```
 
-プロジェクトをデプロイするには、以下のコマンドを実行します。
+- プロジェクトをデプロイするには、以下のコマンドを実行します。
 
-npm run deploy
+```npm run deploy```
 
-デプロイ後、以下のURLでプロジェクトにアクセスできます:
-https://{username}.github.io/{repository-name}
+-デプロイ後、以下のURLでプロジェクトにアクセスできます:
+```https://{username}.github.io/{repository-name}```
 
 
 ### 説明:
