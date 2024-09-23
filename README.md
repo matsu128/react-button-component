@@ -165,10 +165,15 @@
 
 - プロジェクトをデプロイするには、以下のコマンドを実行します。
 
-```npm run deploy```
+```
+npm run deploy
+```
 
 -デプロイ後、以下のURLでプロジェクトにアクセスできます:
-```https://{username}.github.io/{repository-name}```
+
+```
+https://{username}.github.io/{repository-name}
+```
 
 
 ### 説明:
