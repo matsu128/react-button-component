@@ -1,62 +1,71 @@
+/* 基本のボタンスタイル定義 */
 .button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  border: 1px solid #000;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-  background-color: #fff;
-  color: black;
-  text-decoration: none;
+  display: inline-flex; /* 子要素（テキストとアイコン）を横並びにし、中央に揃える */
+  align-items: center; /* ボタン内の要素を縦方向で中央揃えにする */
+  justify-content: center; /* ボタン内の要素を横方向で中央揃えにする */
+  padding: 0.5rem 1rem; /* ボタン内の余白設定 */
+  font-size: 1rem; /* 標準のテキストサイズ */
+  font-weight: bold; /* 太字にする */
+  cursor: pointer; /* ボタンが有効なときにマウスカーソルをポインタにする */
+  border: 1px solid #000; /* 黒い枠線を設定 */
+  border-radius: 4px; /* ボタンの角を丸める */
+  transition: background-color 0.3s ease; /* 背景色の変更にアニメーションを付加 */
+  background-color: #fff; /* 初期背景色は白 */
+  color: black; /* テキスト色は黒 */
+  text-decoration: none; /* リンクの下線を無効化 */
 }
 
+/* 無効化されたボタンのスタイル（クリック不可） */
 .button.disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
+  background-color: #ccc; /* グレーで視覚的に無効を示す */
+  cursor: not-allowed; /* 禁止マークのカーソルに変更 */
 }
 
+/* ローディング中のボタンスタイル */
 .button.loading {
-  background-color: #f5f5f5;
+  background-color: #f5f5f5; /* ローディング中は薄いグレー */
 }
 
+/* ローディングスピナーのスタイル */
 .button .spinner {
   width: 1rem;
   height: 1rem;
-  border: 2px solid black;
-  border-top: 2px solid #fff;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+  border: 2px solid black; /* スピナーの枠線 */
+  border-top: 2px solid #fff; /* スピナーの上部分だけ白にして回転がわかりやすく */
+  border-radius: 50%; /* 円形スピナー */
+  animation: spin 1s linear infinite; /* 1秒かけて回転を続けるアニメーション */
 }
 
+/* スピナーの回転アニメーション定義 */
 @keyframes spin {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(0deg); /* 回転の開始 */
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(360deg); /* 回転の完了 */
   }
 }
 
+/* アイコンの配置とマージン調整 */
 .button .icon-left,
 .button .icon-right {
-  margin: 0 0.5rem;
+  margin: 0 0.5rem; /* テキストとアイコンの間に適度なスペースを確保 */
 }
 
+/* ホバー時のボタンスタイル（ユーザのアクションを視覚的に示す） */
 .button:hover {
-  background-color: #f0f0f0;
+  background-color: #f0f0f0; /* ホバー時に背景色を変更 */
 }
 
+/* フォーカスされたとき（キーボード操作時など）のスタイル */
 .button:focus {
-  outline: 2px solid #0056b3;
+  outline: 2px solid #0056b3; /* フォーカス時のアウトライン（青）でアクセシビリティ対応 */
 }
 
+/* モバイルデバイス向けのレスポンシブ調整 */
 @media (max-width: 768px) {
   .button {
-    font-size: 0.9rem;
-    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem; /* フォントサイズを少し小さく調整 */
+    padding: 0.4rem 0.8rem; /* パディングも小さくしてレイアウトを調整 */
   }
 }
