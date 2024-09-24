@@ -172,7 +172,7 @@ npm run deploy
 -デプロイ後、以下のURLでプロジェクトにアクセスできます:
 
 ```
-[https://{username}.github.io/{repository-name}](https://matsu128.github.io/react-button-component/)
+https://matsu128.github.io/react-button-component/
 ```
 
 
